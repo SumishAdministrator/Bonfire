@@ -6,7 +6,7 @@ Pre-Requisites:
 1. Python (any latest version) to be installed on the endpoint (Win, Lim, Mac)
 2. Check for script file executable permission. If not, modify it as:  <chmod +x fa_metrics_systemhealth.py>
 3. The script file can be run from any absolute path
-4. Ensure you have a Content_Logs directory created as mentioned under "Log Directory" section. For Mac, its: "~/Documents/Content_Logs"
+4. If MacOS as test system, ensure you have a dir named "Content_Logs", as mentioned under "Log Directory" section. For Mac, its: "~/Documents/Content_Logs"
 5. Libraries dependant on: psutil, pandas
 
 Scripts Run
@@ -26,7 +26,8 @@ Objectives Attained
 Output 
 =======
 1. Terminal Console
-2. cat ~/Documents/Content_Logs/<SystemHealth_Log.txt>    
+2. cat ~/Documents/Content_Logs/<File_timestamp_hostname_SystemHealth_Log.txt>
+3. cat ~/Documents/Content_Logs/<Metric_History_csv_Hostname.csv>
 
 
 
