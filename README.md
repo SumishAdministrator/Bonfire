@@ -1,7 +1,6 @@
 # Bonfire
 External
 
-
 Pre-Requisites:
 ===============
 1. Python1 (any latest version) to be installed on the endpoint (Win, Lim, Mac)
@@ -13,16 +12,24 @@ Scripts Run
 ============
 1. ./fa_metrics_systemhealth.py
 
-Output
-======
+Output 
+=======
 1. Terminal Console
-   Example: From Test Run
-   Timestamp | Hostname | CPU usage % | Used Memory | Total Memory | Memory usage % | Used Disk Space | Total Disk Space | Disk usage % | Uptime
-   2025-12-23 20:05:07 | Sunils-MacBook-Air.local | 30% | 3.27 GB | 8.00 GB | 78.1% | 119.93 GB | 228.27 GB | 58.8% | 11 Days
-2. cat ~/Documents/Content_Logs/<SystemHealth_Log.txt>
-    
+2. cat ~/Documents/Content_Logs/<SystemHealth_Log.txt>    
 
-SystemHealth_Log
+
+
+
+
+
+Console Output | (As from a MacOS machine)
+Example-0: From Test Run
+==========================================================================================
+Timestamp | Hostname | CPU usage % | Used Memory | Total Memory | Memory usage % | Used Disk Space | Total Disk Space | Disk usage % | Uptime
+2025-12-23 20:05:07 | Sunils-MacBook-Air.local | 30% | 3.27 GB | 8.00 GB | 78.1% | 119.93 GB | 228.27 GB | 58.8% | 11 Days
+
+
+SystemHealth_Log | 
 Example-1: From Test Run (OK)
 FA Sensor Health Log
 ==========================================================================================
@@ -37,7 +44,7 @@ Timestamp | Hostname | CPU usage % | Used Memory | Total Memory | Memory usage %
 
 Error Code: None
     
-
+SystemHealth_Log |
 Example-2: From Test Run (NOK)
 FA Sensor Health Log
 ==========================================================================================
