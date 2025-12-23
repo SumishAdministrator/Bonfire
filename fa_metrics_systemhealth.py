@@ -82,7 +82,7 @@ def check_permissions(log_dir):
 
 
 # ------------------------------------------------------------
-# Step-5: Cleanup Logs Older Than 30 Days | Optional
+# Step-5: Cleanup Activity Logs Older Than 30 Days | Optional
 # ------------------------------------------------------------
 def cleanup_old_logs(log_dir, retention_days=30):
     cutoff_date = datetime.now() - timedelta(days=retention_days)
@@ -98,26 +98,26 @@ def cleanup_old_logs(log_dir, retention_days=30):
 # Metrics Collection
 # ------------------------------------------------------------
 def get_cpu_usage():
-    cpu = psutil.cpu_times_percent(interval=0.1, percpu=False)
+    cpu = psutil.cpu_times_percent(interval=0.1, percpu=False)                          # Collection - CPU Usage
     return round(100.0 - cpu.idle)
 
 
 def get_memory_usage():
-    mem = psutil.virtual_memory()
+    mem = psutil.virtual_memory()                                                       # Collection - Memory Usage
     used_gb = mem.used / (1024 ** 3)
     total_gb = mem.total / (1024 ** 3)
     return round(used_gb, 1), round(total_gb, 1), round(mem.percent, 1)
 
 
 def get_disk_usage(path):
-    disk = psutil.disk_usage(path)
+    disk = psutil.disk_usage(path)                                                      # Collection - Disk Usage
     used_gb = disk.used / (1024 ** 3)
     total_gb = disk.total / (1024 ** 3)
     return round(used_gb, 1), round(total_gb, 1), round(disk.percent, 1)
 
 
-def get_uptime_days():
-    boot_time = datetime.fromtimestamp(psutil.boot_time())
+def get_uptime_days():          
+    boot_time = datetime.fromtimestamp(psutil.boot_time())                              # Collection - Uptime
     return (datetime.now() - boot_time).days
 
 
@@ -143,7 +143,7 @@ def main():
 
     log_file = os.path.join(
         log_dir,
-        f"{file_timestamp}_{hostname}_SensorHealth_Log.txt"
+        f"{file_timestamp}_{hostname}_SystemHealth_Log.txt"                                 # Activity LogFile Name
     )
 
     try:
@@ -152,8 +152,8 @@ def main():
         disk_path = get_disk_path(os_type)
         disk_used, disk_total, disk_percent = get_disk_usage(disk_path)
         uptime_days = get_uptime_days()
-    except Exception as e:
-        error_code = str(e)
+    except Exception as error_received:
+        error_code = str(error_received)
         cpu_usage = mem_used = mem_total = mem_percent = "N/A"
         disk_used = disk_total = disk_percent = "N/A"
         uptime_days = "N/A"
