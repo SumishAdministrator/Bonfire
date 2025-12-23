@@ -30,8 +30,7 @@ Timestamp | Hostname | CPU usage % | Used Memory | Total Memory | Memory usage %
 
 
 SystemHealth_Log | 
-Example-1: From Test Run (OK)
-FA Sensor Health Log
+Example-1: From Test Run (OK) |
 ==========================================================================================
 Script Run Time : 2025-12-23 20:03:25
 Hostname        : Sunils-MacBook-Air.local
@@ -45,8 +44,7 @@ Timestamp | Hostname | CPU usage % | Used Memory | Total Memory | Memory usage %
 Error Code: None
     
 SystemHealth_Log |
-Example-2: From Test Run (NOK)
-FA Sensor Health Log
+Example-2: From Test Run (NOK) |
 ==========================================================================================
 Script Run Time : 2025-12-23 19:43:49
 Hostname        : Sunils-MacBook-Air.local
