@@ -1,0 +1,4 @@
+Timestamp,Hostname,CPU usage %,Used Memory,Total Memory,Memory usage %,Used Disk Space,Total Disk Space,Disk usage %,Uptime
+2025-12-24 01:19:13,Sunils-MacBook-Air.local,21%,2.93 GB,8.00 GB,84.6%,120.15 GB,228.27 GB,59.2%,11 Days
+2025-12-24 01:19:59,Sunils-MacBook-Air.local,41%,3.41 GB,8.00 GB,78.7%,120.16 GB,228.27 GB,59.2%,11 Days
+2025-12-24 01:26:58,Sunils-MacBook-Air.local,22%,3.18 GB,8.00 GB,81.5%,120.15 GB,228.27 GB,59.2%,11 Days

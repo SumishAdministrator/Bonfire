@@ -142,6 +142,9 @@ def main():
         log_dir,
         f"{file_timestamp}_{hostname}_SystemHealth_Log.txt"                                 # Activity LogFile Name
     )
+    metrics_history_csv = os.path.join(
+        log_dir,
+        f"Metric_History_csv_{hostname}.csv")                                               # Metric CSV File
 
     try:
         (
@@ -202,9 +205,10 @@ def main():
         lf.write(f"Error Code: " + error_code + "\n")
 
     # --------------------------------------------------------
-    # Write CSV File
+    # Write CSV File (with Header if ONLY file do not exists)
     # --------------------------------------------------------
-    metrics_df.to_csv("metric.csv", index=False)
+    write_header = not os.path.exists(metrics_history_csv)
+    metrics_df.to_csv(metrics_history_csv, mode="a", header=write_header, index=False)
     
     cleanup_old_logs(log_dir)
      

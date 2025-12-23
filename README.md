@@ -20,7 +20,7 @@ Objectives Attained
 2. Optional: Log Activity captured for Script
 3. Optional: Output captured on CSV file too
 4. Optional: Handling Error condition
-5. For more details: refer - HL-Design_Doc
+5. For more details: refer - HL-Design_Doc.docx
 
 
 Output 
