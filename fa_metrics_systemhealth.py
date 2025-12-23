@@ -41,11 +41,11 @@ def get_hostname():
 # ------------------------------------------------------------
 def get_disk_path(os_type):
     if os_type == "Windows":
-        return r"C:\ProgramData\FA"
+        return r"C:\ProgramData\FA"             # Windows: Absolute path where FA metadata is available
     elif os_type == "Linux":
-        return "/opt/FA"
+        return "/opt/FA"                        # Linux: Absolute path where FA binaries are available
     elif os_type == "Darwin":
-        return "/Library/FA"
+        return "/Library/FA"                    # Mac: Absolute path where FA binaries are available
     else:
         raise RuntimeError("Unsupported OS")
 
