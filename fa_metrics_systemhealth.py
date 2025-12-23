@@ -42,7 +42,7 @@ def get_hostname():
 # ------------------------------------------------------------
 def get_disk_path(os_type):
     if os_type == "Windows":
-        return r"C:\ProgramData\FA"             # Windows: Absolute path where FA metadata is available
+        return r"C:\\ProgramData\\FA"           # Windows: Absolute path where FA metadata is available. 
     elif os_type == "Linux":
         return "/opt/FA"                        # Linux: Absolute path where FA binaries are available
     elif os_type == "Darwin":
@@ -56,7 +56,7 @@ def get_disk_path(os_type):
 # ------------------------------------------------------------
 def get_log_directory(os_type):
     if os_type == "Windows":
-        return r"C:\temp\Content_Logs"
+        return r"C:\\temp\\Content_Logs"          # Note, if we can have a root partition as validation point
     elif os_type == "Linux":
         return "/var/log/Content_Logs"
     elif os_type == "Darwin":  # macOS
@@ -201,7 +201,13 @@ def main():
         lf.write(value_line + "\n\n")
         lf.write(f"Error Code: " + error_code + "\n")
 
+    # --------------------------------------------------------
+    # Write CSV File
+    # --------------------------------------------------------
+    metrics_df.to_csv("metric.csv", index=False)
+    
     cleanup_old_logs(log_dir)
+     
 
 if __name__ == "__main__":
         main()

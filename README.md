@@ -3,14 +3,24 @@ External
 
 Pre-Requisites:
 ===============
-1. Python1 (any latest version) to be installed on the endpoint (Win, Lim, Mac)
+1. Python (any latest version) to be installed on the endpoint (Win, Lim, Mac)
 2. Check for script file executable permission. If not, modify it as:  <chmod +x fa_metrics_systemhealth.py>
 3. The script file can be run from any absolute path
 4. Ensure you have a Content_Logs directory created as mentioned under "Log Directory" section. For Mac, its: "~/Documents/Content_Logs"
+5. Libraries dependant on: psutil, pandas
 
 Scripts Run
 ============
 1. ./fa_metrics_systemhealth.py
+
+
+Objectives Attained
+===================
+1. Collection and Reporting of Metrics under mandatory section
+2. Optional: Log Activity captured for Script
+3. Optional: Output captured on CSV file too
+4. Optional: Handling Error condition
+
 
 Output 
 =======
